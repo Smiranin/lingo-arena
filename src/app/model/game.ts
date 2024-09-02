@@ -2,8 +2,8 @@ export interface Game extends GameSettings {
     id: string;
     status: GameStatus;
     players: Player[];
-    cards: GameCard[];
-    activeCards: GameCard[];
+    cards: Card[];
+    activeCards: Card[];
     wordsLeft: number;
 }
 
@@ -13,7 +13,7 @@ export interface GameSettings {
     lang: [Lang, Lang];
 }
 
-export interface GameCard {
+export interface Card {
     wordId: string;
     word: string;
     status: CardStatus;
@@ -29,30 +29,30 @@ export interface Player {
 }
 
 //ENUMS:
-enum Lang {
+export enum Lang {
     en,
     ru,
 }
 
-enum GameType {
+export enum GameType {
     single,
     multi,
 }
 
-enum GameStatus {
+export enum GameStatus {
     pending = "pending",
     active = "active",
     cancelled = "cancelled",
     completed = "completed",
 }
 
-enum GameSize {
+export enum GameSize {
     sm = "sm",
     md = "md",
     lg = "lg",
 }
 
-enum CardStatus {
+export enum CardStatus {
     opened = "opened",
     closed = "closed",
     completed = "completed",

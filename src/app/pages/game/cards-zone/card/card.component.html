@@ -1,8 +1,10 @@
-<div onClick={handleClick} class={cssClasses}>
-    <div class={styles.content}>
-      <div class={styles.front}>
+<div [class.opened]="card.status === CardStatus.opened"
+    [class.completed]="card.status === CardStatus.completed"
+    (click)="handleClick()">
+    <div class="content">
+      <div class="front">
         <span>Test</span>
       </div>
-      <div class={styles.back}></div>
+      <div class="back"></div>
     </div>
   </div>
