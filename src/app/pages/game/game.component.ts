@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
+import { GamePanelComponent } from "./game-panel/game-panel.component";
+import { CardsZoneComponent } from "./cards-zone/cards-zone.component";
 
 @Component({
-  selector: 'app-game',
+  selector: 'game',
   standalone: true,
-  imports: [],
+  imports: [GamePanelComponent, CardsZoneComponent],
   templateUrl: './game.component.html',
   styleUrl: './game.component.css'
 })
